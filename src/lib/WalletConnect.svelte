@@ -10,7 +10,6 @@
 		const account = await signer.getAddress();
 		const chainId = await signer.getChainId();
 		const contract = new ethers.Contract(contractAddr, contractAbi.abi, signer);
-		console.log(contract);
 		web3Props = { signer, provider, chainId, account, contract };
 	}
 </script>
