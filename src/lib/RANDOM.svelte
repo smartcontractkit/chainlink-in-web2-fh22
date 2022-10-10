@@ -26,7 +26,11 @@
 	{#if !web3Props.account && !web3Props.contract}
 		<WalletConnect bind:web3Props {contractAddr} contractAbi={VRF} />
 	{:else}
-		<h1 class="text-3xl font-bold underline text-center pb-3">Get A Random Number</h1>
+		<h1 class="text-3xl font-bold underline text-center pb-3">
+			<a href="https://testnet.snowtrace.io/address/0x88477433736d6f4bbAFcbD9E88423fDe09Ce7490"
+				>Get A Random Number</a
+			>
+		</h1>
 		<button class="btn" on:click={() => web3Props.contract.requestRandomWords()}
 			>Get A Random Number</button
 		>
