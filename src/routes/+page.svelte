@@ -7,6 +7,6 @@
 
 <div class="grid h-screen place-items-center">
 	<CONVERT />
-	<RANDOM />
 	<AUTOMATION />
+	<RANDOM />
 </div>

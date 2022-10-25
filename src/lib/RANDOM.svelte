@@ -11,7 +11,7 @@
 	};
 	const contractAddr = '0x88477433736d6f4bbAFcbD9E88423fDe09Ce7490';
 	$: randomNum = 0;
-	const getRandomNumber = async () => {
+	const randomNumberListner = async () => {
 		const url = 'https://api.avax-test.network/ext/bc/C/rpc';
 		var provider = new ethers.providers.JsonRpcProvider(url);
 		const vrfCon = new ethers.Contract(contractAddr, VRF.abi, provider);
@@ -19,7 +19,7 @@
 			randomNum = randomWords[0];
 		});
 	};
-	getRandomNumber();
+	randomNumberListner();
 </script>
 
 <div class="card w-96 bg-base-100 shadow-xl text-center place-items-center p-4">
